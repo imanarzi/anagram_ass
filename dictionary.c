@@ -6,7 +6,9 @@
 unsigned hash(const char *s) {
 	unsigned hashval;
 	//TODO - implement polynomial hashing of string s
-	
+	hashval = 1;
+	for(int i = 0; i < strlen(s); i++)
+		hashval = hashval*31 + s[i];	
 	return hashval ;
 }
 
